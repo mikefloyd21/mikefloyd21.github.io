@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>test</title>
+        <script src="https://floyd-crmcustomerfeedback.cs33.force.com/drrtours/lightning/lightning.out.js"></script>
+    </head>
+    <body>
+        <div id="lexcontainer"></div>
+        <script>
+            $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+            function() { // Callback once framework and app load
+            $Lightning.createComponent(
+            "lightning:flow", // top-level component of your app
+            { }, // attributes to set on the component when created
+            "lexcontainer", // the DOM location to insert the component
+            function(component) { // API name of the Flow
+            component.startFlow("DRR_New_Tour");
+            }
+            );
+            }, 'https://floyd-crmcustomerfeedback.cs33.force.com/drrtours/' // Site endpoint
+            );
+            </script>
+
+    </body>
+</html>
